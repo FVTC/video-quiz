@@ -1,0 +1,113 @@
+
+        
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --correct-color: rgb(65, 139, 65);
+    --incorrect-color: rgb(177, 77, 77);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+dialog {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+dialog[open] {
+    display: flex;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+dialog button {
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+dialog button:disabled {
+    cursor: not-allowed;
+}
+
+dialog > button {
+    display: none;
+}
+
+dialog span {
+    font-size: 1.1rem;
+    margin: 1rem;
+    display: none;
+}
+
+button.correct {
+    background-color: var(--correct-color);
+}
+
+button.incorrect {
+    background-color: var(--incorrect-color);
+}
+
+span.correct {
+    color: var(--correct-color);
+}
+
+span.incorrect {
+    color: var(--incorrect-color);
+}
